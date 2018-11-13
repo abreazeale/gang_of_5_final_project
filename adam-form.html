@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>G5-Final: Adam Form</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</head>
+
+<body class="bg-primary">
+    <nav class="navbar navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" > 
+          <span class="navbar-toggler-icon"></span> Where to?
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="adam.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="adam-form.html">Form</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="adam-columns.html">Multi-Column Text</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="adam-gallery.html">Image Gallery</a>
+            </li>              
+          </ul>
+        </div>
+    </nav>
+    <header class="container text-center bg-primary">
+      <div class="row">
+        <div class="col-sm-12"><h1>A Form</h1></div>
+      </div>
+    </header>
+    <br>
+    <form class="form-horizontal" action="adam.html">
+      <div class="form-group">
+        <label class="control-label col-sm-12" for="picknum">How excited are you about this form?</label>
+        <label class="control-label col-sm-2 text-center" for="picknum">Bummed</label>
+        <label class="control-label col-sm-2 text-center" for="picknum">Meh</label>
+        <label class="control-label col-sm-2 text-center" for="picknum">Okay</label>
+        <label class="control-label col-sm-2 text-center" for="picknum">Impressed</label>
+        <label class="control-label col-sm-2 text-center" for="picknum">Stoked</label>
+        <div class="col-sm-10">
+          <input type="range" class="form-control" id="picknum" min=1 max=5 step=1 value=5>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="dt">Birthdate:</label>
+        <div class="col-sm-10">
+          <input type="date" class="form-control" id="dt" >
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <div class="checkbox">
+            <label><input type="checkbox"> I like simple calculators</label>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <div class="checkbox">
+            <label><input type="checkbox"> I like graphing calculators</label>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <div class="checkbox">
+            <label><input type="checkbox"> I like RESTful APIs</label>
+          </div>
+        </div>
+      </div>            
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-default">Submit</button>
+        </div>
+      </div>
+    </form>     
+
+</body>
+</html>
