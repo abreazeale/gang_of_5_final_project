@@ -44,7 +44,28 @@
           </div>
         <div class="row">
           <div class="col-sm-12">
-            <table id="myTable"></table>
+            <table id="myTable" class="table table-dark table-hover">
+            <thead>
+                <tr>
+                    <th>Sample Col1</th>
+                    <th>Sample Col2</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>A1</td>
+                    <td>B1</td>
+                </tr>
+                <tr>
+                    <td>A2</td>
+                    <td>B2</td>
+                </tr>
+                <tr>
+                    <td>A3</td>
+                    <td>B3</td>
+                </tr>
+                </tbody>
+            </table>
           </div>
         </div>
       </div> 
@@ -116,10 +137,7 @@ function testNodePost(){
             ajaxSetting.data = "{\"agency\": 14}";
     ajaxSetting.success =  function (data, status, xhr) {
         console.log(status);
-        //console.log(data.length);
-        // let prettyText = JSON.stringify(data, null, 2);
-        //console.log(prettyText);
-        // $('#images').html("<pre>"+prettyText+ "</pre>") ;
+
         DisplayJSONobjectArrayAsTable(data, "myTable");
         let responseHeaders = xhr.getAllResponseHeaders();
         //   let responseHeader = xhr.getResponseHeader();
