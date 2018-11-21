@@ -44,7 +44,7 @@
           </div>
         <div class="row">
           <div class="col-sm-12">
-            <table id="myTable" class="table table-dark table-hover">
+            <table id="myTable" class="table table-hover">
             <thead>
                 <tr>
                     <th>Sample Col1</th>
@@ -137,8 +137,16 @@ function testNodePost(){
             ajaxSetting.data = "{\"agency\": 14}";
     ajaxSetting.success =  function (data, status, xhr) {
         console.log(status);
-
-        DisplayJSONobjectArrayAsTable(data, "myTable");
+        let tableHeadings = {
+        "agency_identifier": "Agency ID",
+        "managing_agency": "Agency",
+        "budgetary_resources": "Resources",
+        "account_number": "Account #",
+        "account_id": "Account ID",
+        "managing_agency_acronym": "Abbrv.",
+        "account_name": "Account"
+        };
+        DisplayJSONobjectArrayAsTable(data.results, "myTable", tableHeadings);
         let responseHeaders = xhr.getAllResponseHeaders();
         //   let responseHeader = xhr.getResponseHeader();
         let responseText = xhr.responseText;
@@ -192,7 +200,7 @@ function DisplayJSONobjectArrayAsTable(arrayOfObjects, elementID, keyToHeadingAr
             //$.getJSON("https://abreazeale.github.io/gang_of_5_final_project/adamfinal/getMortality", function(data, status, xhr){
                 //let pretyJSON = JSON.stringify(data, null, 2);
                // $('#images').html("<pre>" +pretyJSON +"</pre>") ;
-                DisplayJSONobjectArrayAsTable(data, "myTable");
+                DisplayJSONobjectArrayAsTable(data.data, "myTable");
             })};            
 </script>
 </html>
