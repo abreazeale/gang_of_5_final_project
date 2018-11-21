@@ -41,7 +41,7 @@ function testNodePost(){
 
 ## Lessons Learned
 + CORS can be a real pain!
-+ Controlling Type within JS is difficult
++ Controlling Type within JS is difficult; if JS is not responding as expected then debug to monitor objects
 
 ## "Live" Site URL
 <https://abreazeale.github.io/gang_of_5_final_project/adamfinal/adamfinal.html>
